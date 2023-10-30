@@ -1,0 +1,23 @@
+[package]
+name = "ic_utils"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ic-cdk-macros = "0.7"
+candid = "0.9"
+ic-ledger-types = "0.7.0"
+ic-stable-structures = "0.5.6"
+ic-cdk = "0.10"
+ic-cdk-bindgen = "0.1.0"
+serde = "1.0"
+num-bigint = "0.4.2"
+#log4rs = {version= "0.13.0",features = ["console_appender"]}
+lazy_static = "1.4"
+bigdecimal = "0.4"
+
+
+[dev-dependencies]
+tokio = { version = "0.2.10", features = [ "full"]  }
