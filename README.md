@@ -19,3 +19,14 @@ In this example, an empty VecDeque of type VecDeque<SwapOrder> is returned if no
  fstr_to_nat("3.1231313",1_000_000_000_000_000_000f64);
 ```
 In this example, we are converting numeric characters of type 'str' into Nat numbers with 18-digit precision.
+
+
+### guard
+The tool supports locking operations requested to canister to prevent anomalies caused by data reentry.
+```rust
+//Add Exclusion Lock
+let guard = CallerGuard::new(id().clone());
+    if guard.is_err() {
+    panic!("{}",guard.err().unwrap());
+}
+```

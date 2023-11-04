@@ -1,5 +1,7 @@
+use candid::Nat;
+use num_bigint::BigUint;
 
-pub fn fstr_to_nat(v: String, decimal:f64)->Nat{
+pub fn fstr_to_nat(v: String, decimal:f64) ->Nat{
     let l:f64= v.parse::<f64>().unwrap()*decimal;
     Nat::from(l as u64)
 }
