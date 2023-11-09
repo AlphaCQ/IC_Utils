@@ -21,7 +21,7 @@ In this example, an empty VecDeque of type VecDeque<SwapOrder> is returned if no
 In this example, we are converting numeric characters of type 'str' into Nat numbers with 18-digit precision.
 
 
-### guard
+### Guard
 The tool supports locking operations requested to canister to prevent anomalies caused by data reentry.
 ```rust
 //Add Exclusion Lock
@@ -30,3 +30,20 @@ let guard = CallerGuard::new(id().clone());
     panic!("{}",guard.err().unwrap());
 }
 ```
+
+
+### Throws
+The throws utility class is used to handle exceptions when called, throwing panic when the received instance is an exception and returning data results when normal.
+```rust
+//Exception handling when creating a canister
+let (cid, ) = throw(create_canister(CreateCanisterArgument {
+        settings: Some(CanisterSettings {
+            controllers: Some(vec![id()]),
+            compute_allocation: None,
+            memory_allocation: None,
+            freezing_threshold: None,
+        })
+    }, 500000000000).await.map_err(|e| "Create Pool failed:".to_string() + &*e.1));
+
+```
+
