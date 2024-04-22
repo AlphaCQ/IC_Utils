@@ -56,3 +56,13 @@ let (cid, ) = throw(create_canister(CreateCanisterArgument {
 
 ```
 
+## Feature Milestones
+Developers continue to enhance this toolchain to support a broader range of application scenarios and to accelerate development efficiency on the IC platform.
+
+- [x] IcContext
+- [x] NatUtils
+- [x] Guard
+- [x] Throws
+- [ ] MemoryStorage:A method for managing large objects.
+- [ ] CommonCanister:A tool that integrates basic canister query interfaces such as cycles querying and memory querying services, serving as the foundational integration for any canister.
+
