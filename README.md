@@ -63,6 +63,7 @@ Developers continue to enhance this toolchain to support a broader range of appl
 - [x] NatUtils
 - [x] Guard
 - [x] Throws
+- [x] LinkedHashMap:The LinkedHashMap is a custom data structure that combines the features of a hash map and a linked list. It maintains a hash map for fast key-value lookups and a linked list to preserve the order of insertion.
 - [ ] MemoryStorage:A method for managing large objects.
 - [ ] CommonCanister:A tool that integrates basic canister query interfaces such as cycles querying and memory querying services, serving as the foundational integration for any canister.
 
