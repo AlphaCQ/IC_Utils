@@ -1,7 +1,16 @@
 # IC_Utils
 Designed for rapid iteration in IC Canister development projects.
 
+## Summary
+`IcContext` provides a context for invoking IC canister objects, facilitating storage and retrieval of object data within the canister.
 
+`NatUtils` enables rapid generation and conversion of Nat types for natural numbers.
+
+`Guard` supports locking operations on canisters to prevent data reentry anomalies. 
+
+`Throws` utility class handles exceptions, triggering panic for exceptional instances and returning data results for normal cases.
+
+## Details
 ### IcContext
 IcContext provides the context for ic canister object invocation, which is used to store the object type and facilitate the user to store and call the object data in canister.
 
@@ -46,4 +55,14 @@ let (cid, ) = throw(create_canister(CreateCanisterArgument {
     }, 500000000000).await.map_err(|e| "Create Pool failed:".to_string() + &*e.1));
 
 ```
+
+## Feature Milestones
+Developers continue to enhance this toolchain to support a broader range of application scenarios and to accelerate development efficiency on the IC platform.
+
+- [x] IcContext
+- [x] NatUtils
+- [x] Guard
+- [x] Throws
+- [ ] MemoryStorage:A method for managing large objects.
+- [ ] CommonCanister:A tool that integrates basic canister query interfaces such as cycles querying and memory querying services, serving as the foundational integration for any canister.
 
