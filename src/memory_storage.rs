@@ -34,7 +34,7 @@ impl<K, V> LinkedHashMap<K, V>
 
     fn remove(&mut self, key: &K) -> Option<V> {
         if let Some(value) = self.map.remove(key) {
-            self.list.retain(|k| k != key);
+            self.list = self.list.iter().cloned().filter(|k| k != key).collect();
             return Some(value);
         }
         None
